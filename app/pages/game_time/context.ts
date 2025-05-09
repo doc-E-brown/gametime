@@ -57,7 +57,7 @@ export function getDefaultGameState(): GameState {
             createPlayer('Sam'),
             createPlayer('Tim'),
         ],
-        playersOnField: 1,
+        playersOnField: 9,
         isGamePlaying: false,
         gameStage: 'pre-game',
     }

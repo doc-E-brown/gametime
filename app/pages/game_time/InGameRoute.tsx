@@ -97,7 +97,7 @@ export default function InGameRoute() {
             <KeeperComponent
                 players={gameState.players}
                 onDown={(name: string) => {
-                    if (gameState.players.filter((player) => player.status === 'onField').length >= gameState.playersOnField) {
+                    if (gameState.players.filter((player) => player.status === 'onField').length >= (gameState.playersOnField - 1)) {
                         changeStatus(name, 'isSub')
                     } else {
                         changeStatus(name, 'onField')
@@ -115,11 +115,11 @@ export default function InGameRoute() {
                 players={gameState.players}
                 onDown={(name: string) => changeStatus(name, 'isUnavailable')}
                 onUp={(name: string) => {
-                    if (gameState.players.filter((player) => player.status === 'onField').length >= gameState.playersOnField &&
+                    if (gameState.players.filter((player) => player.status === 'onField').length >= (gameState.playersOnField - 1)  &&
                         gameState.players.filter((player) => player.status === 'isKeeper').length == 0
                     ) {
                         changeStatus(name, 'isKeeper')
-                    } else {
+                    } else if (gameState.players.filter((player) => player.status === 'onField').length < (gameState.playersOnField - 1)){
                         changeStatus(name, 'onField')
                     }
                 }}
