@@ -79,7 +79,8 @@ export default function InGameRoute() {
         if( clearDataCount > 2) {
             setGameState((prevState) => getDefaultGameState())
             removeGameContextCookie(GameContextCookie)
-            setClearDataCount(0)
+            setClearDataCount((prevState) => {return 0})
+            setGameClock((prevState) => {return 0})
         }
     }
 
