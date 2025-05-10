@@ -5,7 +5,7 @@ import {
     getDefaultGameState,
     PlayerState,
     PlayerStatus
-} from "~/pages/game_time/context.ts";
+} from "~/pages/context.ts";
 import {KeeperComponent} from "~/components/KeeperComponent.tsx";
 import {useState} from "react";
 import {OnFieldComponent} from "~/components/OnFieldComponent.tsx";

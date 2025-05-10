@@ -1,8 +1,8 @@
 import { type RouteConfig, index, route } from "@react-router/dev/routes";
 
 export default [
-    index("./pages/home/HomeRoute.tsx"),
-    route("/game_time/in_game", "./pages/game_time/InGameRoute.tsx"),
-    route("/game_time/export_data", "./pages/game_time/ExportDataRoute.tsx"),
+    index("./pages/HomeRoute.tsx"),
+    route("/in_game", "./pages/InGameRoute.tsx"),
+    route("/export_data", "./pages/ExportDataRoute.tsx"),
     route('*', 'NotFound.tsx'),
 ] satisfies RouteConfig;

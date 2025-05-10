@@ -1,4 +1,4 @@
-import {PlayerState} from "~/pages/game_time/context.ts";
+import {PlayerState} from "~/pages/context.ts";
 import {PlayerCard} from "~/components/PlayerCard.tsx";
 
 export type ReserveComponentProps = {
