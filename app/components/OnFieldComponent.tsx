@@ -1,5 +1,5 @@
 import {PlayerState} from "~/pages/game_time/context.ts";
-import {PlayerCard} from "~/pages/game_time/PlayerCard.tsx";
+import {PlayerCard} from "~/components/PlayerCard.tsx";
 
 export type OnFieldComponentProps = {
     players: PlayerState[],

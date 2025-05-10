@@ -6,13 +6,13 @@ import {
     PlayerState,
     PlayerStatus
 } from "~/pages/game_time/context.ts";
-import {KeeperComponent} from "~/pages/game_time/KeeperComponent.tsx";
+import {KeeperComponent} from "~/components/KeeperComponent.tsx";
 import {useState} from "react";
-import {OnFieldComponent} from "~/pages/game_time/OnFieldComponent.tsx";
-import {ReserveComponent} from "~/pages/game_time/ReserveComponent.tsx";
-import {UnavailableComponent} from "~/pages/game_time/UnavailableComponent.tsx";
-import useTick from "~/pages/game_time/useTick.tsx";
-import {timeToString} from "~/pages/game_time/PlayerCard.tsx";
+import {OnFieldComponent} from "~/components/OnFieldComponent.tsx";
+import {ReserveComponent} from "~/components/ReserveComponent.tsx";
+import {UnavailableComponent} from "~/components/UnavailableComponent.tsx";
+import useTick from "~/lib/useTick.tsx";
+import {timeToString} from "~/components/PlayerCard.tsx";
 import {useNavigate} from "react-router";
 
 

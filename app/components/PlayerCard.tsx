@@ -1,4 +1,4 @@
-import { PlayerState } from "./context"
+import { PlayerState } from "../pages/game_time/context.ts"
 import { LuCircleChevronDown, LuCircleChevronUp } from "react-icons/lu";
 
 export type PlayerCardProps = {

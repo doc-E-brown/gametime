@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="599d0c68-2914-4d20-81c7-1dfd4104977b" name="Changes" comment="feat: Update number of players">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="599d0c68-2914-4d20-81c7-1dfd4104977b" name="Changes" comment="fix: Clearing data resets clock" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -97,7 +95,7 @@
       <workItem from="1746755564748" duration="2177000" />
       <workItem from="1746758917795" duration="11984000" />
       <workItem from="1746771352447" duration="2308000" />
-      <workItem from="1746773693160" duration="18877000" />
+      <workItem from="1746773693160" duration="19703000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Add netlify config">
       <option name="closed" value="true" />
@@ -123,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746834590633</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix: Clearing data resets clock">
+      <option name="closed" value="true" />
+      <created>1746835305905</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746835305905</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +138,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: Add netlify config" />
     <MESSAGE value="feat: Update number of players" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Update number of players" />
+    <MESSAGE value="fix: Clearing data resets clock" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: Clearing data resets clock" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
