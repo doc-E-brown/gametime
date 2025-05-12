@@ -4,7 +4,47 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="599d0c68-2914-4d20-81c7-1dfd4104977b" name="Changes" comment="fix: Clearing data resets clock" />
+    <list default="true" id="599d0c68-2914-4d20-81c7-1dfd4104977b" name="Changes" comment="chore: Tidy up structure">
+      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/PlayerStatus/Keeper.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/PlayerStatus/OnField.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/PlayerStatus/PlayerCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/PlayerStatus/Reserve.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/PlayerStatus/Reserve.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/PlayerStatus/Unavailable.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/PlayerStatus/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/PlayerStatus/statusChecks.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/icons/GoalKeeper.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/icons/OnField.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/icons/Reserve.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/icons/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/lib/ChangePlayerStatus.test.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/lib/ChangePlayerStatus.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/lib/UpdateClocks.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/lib/utils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/eslint.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vitest.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/NotFound.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/NotFound.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/KeeperComponent.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/OnFieldComponent.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PlayerCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/ReserveComponent.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/UnavailableComponent.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/useTick.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/useTick.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/ExportDataRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/ExportDataRoute.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/HomeRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/HomeRoute.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/InGameRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/InGameRoute.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/pages/context.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/context.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/welcome/logo-dark.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/welcome/logo-light.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/welcome/welcome.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +53,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -26,18 +66,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "doc-E-brown"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;doc-E-brown&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:doc-E-brown/playtime.git",
-    "accountId": "31952792-c6ad-45df-b01c-ac3b30f79258"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:doc-E-brown/gametime.git&quot;,
+    &quot;accountId&quot;: &quot;31952792-c6ad-45df-b01c-ac3b30f79258&quot;
   }
-}]]></component>
+}</component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="UeF8anLJ" />
   </component>
@@ -55,28 +95,103 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.rust.reset.selective.auto.import": "true",
+    "Vitest.ChangePlayerStatus.should update player status correctly.executor": "Run",
+    "Vitest.ReserveComponent.executor": "Run",
+    "Vitest.ReserveComponent.should correctly order the players using default sort.executor": "Run",
+    "Vitest.ReserveComponent.should correctly order the players using timePlayed sort.executor": "Run",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/ben/Workspace/playtime/app/pages/game_time",
+    "last_opened_file_path": "/home/ben/Workspace/gametime",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_interpreter_path": "/home/ben/.nvm/versions/node/v22.13.0/bin/node",
     "nodejs_package_manager_path": "/home/ben/.local/share/pnpm/pnpm",
+    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
     "org.rust.first.attach.projects": "true",
-    "settings.editor.selected.configurable": "settings.nodejs",
-    "ts.external.directory.path": "/home/ben/Workspace/playtime/node_modules/typescript/lib",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "/home/ben/Workspace/gametime/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/app/pages/game_time" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/components/icons" />
+      <recent name="$PROJECT_DIR$/app/components/PlayerStatus" />
       <recent name="$PROJECT_DIR$/app/pages" />
+      <recent name="$PROJECT_DIR$/app/lib" />
+      <recent name="$PROJECT_DIR$/app/components" />
     </key>
+  </component>
+  <component name="RunManager" selected="Vitest.ReserveComponent.should correctly order the players using timePlayed sort">
+    <configuration name="ChangePlayerStatus.should update player status correctly" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/app/lib/ChangePlayerStatus.test.ts" />
+      <test-names>
+        <test-name value="ChangePlayerStatus" />
+        <test-name value="should update player status correctly" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="ReserveComponent" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/app/components/ReserveComponent.test.tsx" />
+      <test-names>
+        <test-name value="ReserveComponent" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="ReserveComponent.should correctly order the players using default sort" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/app/components/ReserveComponent.test.tsx" />
+      <test-names>
+        <test-name value="ReserveComponent" />
+        <test-name value="should correctly order the players using default sort" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="ReserveComponent.should correctly order the players using timePlayed sort" type="JavaScriptTestRunnerVitest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <vitest-package value="$PROJECT_DIR$/node_modules/vitest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <vitest-options value="--run" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/app/components/ReserveComponent.test.tsx" />
+      <test-names>
+        <test-name value="ReserveComponent" />
+        <test-name value="should correctly order the players using timePlayed sort" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Vitest.ReserveComponent.should correctly order the players using timePlayed sort" />
+        <item itemvalue="Vitest.ReserveComponent.should correctly order the players using default sort" />
+        <item itemvalue="Vitest.ReserveComponent" />
+        <item itemvalue="Vitest.ChangePlayerStatus.should update player status correctly" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
@@ -95,7 +210,11 @@
       <workItem from="1746755564748" duration="2177000" />
       <workItem from="1746758917795" duration="11984000" />
       <workItem from="1746771352447" duration="2308000" />
-      <workItem from="1746773693160" duration="19703000" />
+      <workItem from="1746773693160" duration="22882000" />
+      <workItem from="1746878003072" duration="12485000" />
+      <workItem from="1747019937587" duration="4022000" />
+      <workItem from="1747032138204" duration="1219000" />
+      <workItem from="1747033371400" duration="3519000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Add netlify config">
       <option name="closed" value="true" />
@@ -129,17 +248,55 @@
       <option name="project" value="LOCAL" />
       <updated>1746835305905</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix: Clean up repo">
+      <option name="closed" value="true" />
+      <created>1746875361758</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1746875361758</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix: Netlify refresh errors">
+      <option name="closed" value="true" />
+      <created>1746876027900</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1746876027900</updated>
+    </task>
+    <task id="LOCAL-00007" summary="chore: Tidy up structure">
+      <option name="closed" value="true" />
+      <created>1746876975230</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1746876975230</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: Add netlify config" />
     <MESSAGE value="feat: Update number of players" />
     <MESSAGE value="fix: Clearing data resets clock" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix: Clearing data resets clock" />
+    <MESSAGE value="fix: Clean up repo" />
+    <MESSAGE value="fix: Netlify refresh errors" />
+    <MESSAGE value="chore: Tidy up structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="chore: Tidy up structure" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

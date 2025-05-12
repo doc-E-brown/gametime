@@ -48,10 +48,10 @@ export function HydrateFallback() {
 
 export default function App() {
   return (
-      <CookiesProvider defaultSetOptions={{ path: "/" }}>
-       <Outlet />
-      </CookiesProvider>
-  )
+    <CookiesProvider defaultSetOptions={{ path: "/" }}>
+      <Outlet />
+    </CookiesProvider>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
