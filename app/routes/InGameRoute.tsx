@@ -84,11 +84,12 @@ export default function InGameRoute() {
   useTick(10000, saveGameState)
 
   const exportData = () => {
-    setIsPlaying((prevState) => false)
+    setIsPlaying(() => false)
     setGameContextCookie(GameContextCookie, {
       ...gameState,
     })
-    navigate('/game_time/export_data')
+    // eslint-disable-next-line @typescript-eslint/no-floating-promises
+    navigate('/export_data')
   }
   const resetData = () => {
     setClearDataCount((prevState) => prevState + 1)

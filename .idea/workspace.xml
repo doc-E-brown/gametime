@@ -4,46 +4,28 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="599d0c68-2914-4d20-81c7-1dfd4104977b" name="Changes" comment="chore: Tidy up structure">
-      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/PlayerStatus/Keeper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/PlayerStatus/OnField.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/PlayerStatus/PlayerCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/PlayerStatus/Reserve.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/PlayerStatus/Reserve.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/PlayerStatus/Unavailable.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/PlayerStatus/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/PlayerStatus/statusChecks.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/icons/GoalKeeper.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/icons/OnField.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/icons/Reserve.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/icons/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/ChangePlayerStatus.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/ChangePlayerStatus.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/UpdateClocks.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/lib/utils.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/eslint.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vitest.config.ts" afterDir="false" />
+    <list default="true" id="599d0c68-2914-4d20-81c7-1dfd4104977b" name="Changes" comment="feat: Big usability update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/NotFound.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/NotFound.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/KeeperComponent.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/OnFieldComponent.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PlayerCard.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ReserveComponent.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/UnavailableComponent.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PlayerStatus/OnField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PlayerStatus/OnField.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PlayerStatus/Reserve.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PlayerStatus/Reserve.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/PlayerStatus/statusChecks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/PlayerStatus/statusChecks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/ChangePlayerStatus.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ChangePlayerStatus.test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/ChangePlayerStatus.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ChangePlayerStatus.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/UpdateClocks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/UpdateClocks.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/useTick.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/useTick.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/pages/ExportDataRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/ExportDataRoute.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/pages/HomeRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/HomeRoute.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/pages/InGameRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/InGameRoute.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/pages/context.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/pages/context.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/welcome/logo-dark.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/welcome/logo-light.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/welcome/welcome.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-router.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/react-router.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vitest.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vitest.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +196,7 @@
       <workItem from="1746878003072" duration="12485000" />
       <workItem from="1747019937587" duration="4022000" />
       <workItem from="1747032138204" duration="1219000" />
-      <workItem from="1747033371400" duration="3519000" />
+      <workItem from="1747033371400" duration="4880000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Add netlify config">
       <option name="closed" value="true" />
@@ -272,7 +254,31 @@
       <option name="project" value="LOCAL" />
       <updated>1746876975230</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="feat: Big usability update">
+      <option name="closed" value="true" />
+      <created>1747036998317</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1747036998317</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: Big usability update">
+      <option name="closed" value="true" />
+      <created>1747037008606</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1747037008606</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: Big usability update">
+      <option name="closed" value="true" />
+      <created>1747037052172</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1747037052172</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +302,8 @@
     <MESSAGE value="fix: Clean up repo" />
     <MESSAGE value="fix: Netlify refresh errors" />
     <MESSAGE value="chore: Tidy up structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="chore: Tidy up structure" />
+    <MESSAGE value="feat: Big usability update" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Big usability update" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,7 +1,7 @@
-import {redirect} from "react-router";
+import { redirect } from 'react-router'
 
 export function clientLoader() {
-  return redirect("/in_game");
+  return redirect('/in_game')
 }
 
 export default function HomeRoute() {
@@ -10,5 +10,5 @@ export default function HomeRoute() {
       <h1>Home</h1>
       <p>Redirecting to game time...</p>
     </div>
-  );
+  )
 }

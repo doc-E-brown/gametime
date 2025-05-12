@@ -1,6 +1,6 @@
-import { PlayerState } from '../../pages/context.ts'
+import { PlayerState } from '../../routes/context.ts'
 import { PlayerCard } from './PlayerCard.tsx'
-import { GoalKeeper, Reserve, OnField as OnFieldIcon, Reserve as ReserveIcon } from '../icons'
+import { GoalKeeper, Reserve, OnField as OnFieldIcon } from '../icons'
 
 export type OnFieldComponentProps = {
   players: PlayerState[]

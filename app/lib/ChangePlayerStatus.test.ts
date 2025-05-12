@@ -1,21 +1,21 @@
-import { describe, expect, it, vi } from "vitest";
-import ChangePlayerStatus from "../lib/ChangePlayerStatus.ts";
-import { GameState } from "../pages/context";
+import { describe, expect, it, vi } from 'vitest'
+import ChangePlayerStatus from '../lib/ChangePlayerStatus.ts'
+import { GameState } from '../routes/context'
 
-describe("ChangePlayerStatus", () => {
-  it("should update player status correctly", () => {
+describe('ChangePlayerStatus', () => {
+  it('should update player status correctly', () => {
     const initialGameState: GameState = {
       players: [
         {
-          name: "Player1",
-          status: "isKeeper",
+          name: 'Player1',
+          status: 'isKeeper',
           timePlayed: 0,
           timesAsSub: 0,
           subOffTime: 0,
         },
         {
-          name: "Player2",
-          status: "isReserve",
+          name: 'Player2',
+          status: 'isReserve',
           timePlayed: 0,
           timesAsSub: 0,
           subOffTime: 0,
@@ -23,14 +23,10 @@ describe("ChangePlayerStatus", () => {
       ],
       playersOnField: 0,
       isGamePlaying: false,
-      gameStage: "pre-game",
-    };
+      gameStage: 'pre-game',
+    }
 
-    const newGameState = ChangePlayerStatus(
-      initialGameState,
-      "Player2",
-      "isKeeper",
-    );
-    expect(newGameState.players[1].status).toBe("isKeeper");
-  });
-});
+    const newGameState = ChangePlayerStatus(initialGameState, 'Player2', 'isKeeper')
+    expect(newGameState.players[1].status).toBe('isKeeper')
+  })
+})

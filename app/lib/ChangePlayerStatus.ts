@@ -1,4 +1,4 @@
-import { GameState, PlayerStatus } from "../pages/context.ts";
+import { GameState, PlayerStatus } from '../routes/context.ts'
 
 export default function ChangePlayerStatus(
   gameState: GameState,
@@ -12,12 +12,11 @@ export default function ChangePlayerStatus(
         return {
           ...player,
           status,
-          subOffTime: status === "isReserve" ? new Date().getTime() : player.subOffTime,
-          timesAsSub: status === "isReserve" ? player.timesAsSub + 1 : player.timesAsSub,
-        };
+          subOffTime: status === 'isReserve' ? new Date().getTime() : player.subOffTime,
+          timesAsSub: status === 'isReserve' ? player.timesAsSub + 1 : player.timesAsSub,
+        }
       }
-      return player;
+      return player
     }),
-  };
+  }
 }
-``

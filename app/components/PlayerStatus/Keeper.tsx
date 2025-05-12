@@ -1,4 +1,4 @@
-import { PlayerState } from '../../pages/context.ts'
+import { PlayerState } from '../../routes/context.ts'
 import { GoalKeeper, OnField as OnFieldIcon, Reserve } from '../icons'
 import { PlayerCard } from './PlayerCard.tsx'
 

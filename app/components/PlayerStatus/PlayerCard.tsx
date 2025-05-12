@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { PlayerState } from '../../pages/context.ts'
+import { PlayerState } from '../../routes/context.ts'
 import { timeToString } from '../../lib/utils.ts'
 
 export type PlayerCardProps = {
