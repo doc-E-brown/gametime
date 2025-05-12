@@ -1,36 +1,36 @@
-import { PlayerState } from '../../routes/context.ts'
-import { PlayerCard } from './PlayerCard.tsx'
+import { Player, PlayerState } from '../../data'
+import { PlayerStateCard } from './PlayerStateCard.tsx'
 import { GoalKeeper, Reserve, OnField as OnFieldIcon } from '../icons'
 
 export type OnFieldComponentProps = {
-  players: PlayerState[]
-  onKeeperAction: (name: string) => void
-  onReserveAction: (name: string) => void
+  playerStates: PlayerState[]
+  onKeeperAction: (name: Player) => void
+  onReserveAction: (name: Player) => void
 }
 
-export function OnField({ players, onKeeperAction, onReserveAction }: OnFieldComponentProps) {
+export function OnField({ playerStates, onKeeperAction, onReserveAction }: OnFieldComponentProps) {
   return (
     <div className="w-full border-white rounded-md">
       <h2 className="font-bold pt-2">
         <OnFieldIcon size={'16'} />
         <span className="pl-2">On Field</span>
       </h2>
-      {players
-        .filter((player) => player.status === 'isOnField')
+      {playerStates
+        .filter((state) => state.status === 'isOnField')
         .sort((a, b) => b.timePlayed - a.timePlayed)
-        .map((player) => {
+        .map((state) => {
           return (
-            <PlayerCard
-              player={player}
-              key={player.name}
+            <PlayerStateCard
+              playerState={state}
+              key={state.player.name}
               optionAComponent={<OnFieldIcon />}
               optionAEnabled={false}
-              optionBComponent={<Reserve subCount={player.timesAsSub} />}
+              optionBComponent={<Reserve subCount={state.timesAsSub} />}
               optionBEnabled={true}
-              onOptionBClick={() => onReserveAction(player.name)}
+              onOptionBClick={() => onReserveAction(state.player)}
               optionCComponent={<GoalKeeper />}
               optionCEnabled={true}
-              onOptionCClick={() => onKeeperAction(player.name)}
+              onOptionCClick={() => onKeeperAction(state.player)}
             />
           )
         })}

@@ -1,11 +1,4 @@
-import { useCookies } from 'react-cookie'
-import {
-  GameContextCookie,
-  GameState,
-  getDefaultGameState,
-  PlayerState,
-  PlayerStatus,
-} from './context.ts'
+import { GameState, Player, getDefaultGameState, PlayerStatus, PlayerState } from '../data'
 import {
   isFieldFull,
   isKeeperAssigned,
@@ -21,13 +14,8 @@ import ChangePlayerStatus from 'app/lib/ChangePlayerStatus.ts'
 import { timeToString } from '../lib/utils.ts'
 
 export default function InGameRoute() {
-  const [gameContextCookie, setGameContextCookie, removeGameContextCookie] = useCookies<
-    typeof GameContextCookie,
-    GameState
-  >([GameContextCookie])
-  const [gameState, setGameState] = useState<GameState>(
-    gameContextCookie[GameContextCookie] ?? getDefaultGameState(),
-  )
+  const GameContextCookie = 'gameContextCookie'
+  const [gameState, setGameState] = useState<GameState>(getDefaultGameState())
   const [isPlaying, setIsPlaying] = useState(false)
   const [gameClock, setGameClock] = useState(0)
   const [clearDataCount, setClearDataCount] = useState(0)
@@ -35,24 +23,24 @@ export default function InGameRoute() {
 
   ///////////////////////////////////////////////////////////////////////////////////////////
   // Manage player status
-  const changeStatus = (name: string, status: PlayerStatus) => {
-    setGameState((prevState) => ChangePlayerStatus(prevState, name, status))
+  const changeStatus = (player, status) => {
+    setGameState((prevState) => ChangePlayerStatus(prevState, player, status))
   }
 
-  const onFieldAction = (name: string) => {
+  const onFieldAction = (player: Player) => {
     if (!isFieldFull(gameState)) {
-      changeStatus(name, 'isOnField')
+      changeStatus(player, 'isOnField')
     }
   }
 
-  const onKeeperAction = (name: string) => {
+  const onKeeperAction = (player: Player) => {
     if (!isKeeperAssigned(gameState)) {
-      changeStatus(name, 'isKeeper')
+      changeStatus(player, 'isKeeper')
     }
   }
 
-  const onReserveAction = (name: string) => {
-    changeStatus(name, 'isReserve')
+  const onReserveAction = (player: Player) => {
+    changeStatus(player, 'isReserve')
   }
   ///////////////////////////////////////////////////////////////////////////////////////////
 
@@ -62,40 +50,40 @@ export default function InGameRoute() {
     setGameState((prevState) => {
       return {
         ...prevState,
-        players: prevState.players.map((player: PlayerState) => {
+        playerStates: prevState.playerStates.map((state: PlayerState) => {
           return {
-            ...player,
+            ...state,
             timePlayed:
-              player.status === 'isOnField' ? player.timePlayed + deltaTime : player.timePlayed,
+              state.status === 'isOnField' ? state.timePlayed + deltaTime : state.timePlayed,
           }
         }),
       }
     })
   }
 
-  const saveGameState = (deltaTime: number) => {
-    if (!isPlaying) return
-    // setClearDataCount((prevState) => 0)
-    setGameContextCookie(GameContextCookie, {
-      ...gameState,
-    })
-  }
+  // const saveGameState = (deltaTime: number) => {
+  //   if (!isPlaying) return
+  //   // setClearDataCount((prevState) => 0)
+  //   setGameContextCookie(GameContextCookie, {
+  //     ...gameState,
+  //   })
+  // }
   useTick(1000, updateClocks)
-  useTick(10000, saveGameState)
+  // useTick(10000, saveGameState)
 
-  const exportData = () => {
-    setIsPlaying(() => false)
-    setGameContextCookie(GameContextCookie, {
-      ...gameState,
-    })
-    // eslint-disable-next-line @typescript-eslint/no-floating-promises
-    navigate('/export_data')
-  }
+  // const exportData = () => {
+  //   setIsPlaying(() => false)
+  //   setGameContextCookie(GameContextCookie, {
+  //     ...gameState,
+  //   })
+  //   // eslint-disable-next-line @typescript-eslint/no-floating-promises
+  //   navigate('/export_data')
+  // }
   const resetData = () => {
     setClearDataCount((prevState) => prevState + 1)
     if (clearDataCount > 2) {
       setGameState((prevState) => getDefaultGameState())
-      removeGameContextCookie(GameContextCookie)
+      // removeGameContextCookie(GameContextCookie)
       setClearDataCount((prevState) => {
         return 0
       })
@@ -127,22 +115,22 @@ export default function InGameRoute() {
       <h2 className="font-bold p-2">Roster</h2>
       <div className="p-4 bg-gray-800 rounded-2xl">
         <Keeper
-          players={gameState.players}
+          playerStates={gameState.playerStates}
           onReserveAction={onReserveAction}
           onFieldAction={onFieldAction}
         />
         <OnField
-          players={gameState.players}
+          playerStates={gameState.playerStates}
           onReserveAction={onReserveAction}
           onKeeperAction={onKeeperAction}
         />
         <Reserve
-          players={gameState.players}
+          playerStates={gameState.playerStates}
           onKeeperAction={onKeeperAction}
           onFieldAction={onFieldAction}
         />
         <Unavailable
-          players={gameState.players}
+          playerStates={gameState.playerStates}
           onReserveAction={onReserveAction}
           onFieldAction={onFieldAction}
           onKeeperAction={onKeeperAction}
@@ -151,7 +139,7 @@ export default function InGameRoute() {
       <h2 className="font-bold p-2">Data Management</h2>
       <div className="p-4 bg-gray-800 rounded-2xl grid grid-cols-2 items-center justify-items-center">
         <div className="col-span-1">
-          <button onClick={exportData}>Export Data</button>
+          <button onClick={() => {}}>Export Data</button>
         </div>
         <div className={clearDataCount > 2 ? 'col-span-1 text-red-400' : 'col-span-1'}>
           <button onClick={resetData}>Clear All Data</button>

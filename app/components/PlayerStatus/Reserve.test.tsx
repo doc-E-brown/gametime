@@ -1,9 +1,9 @@
 import { describe, expect, it } from 'vitest'
 import { render, screen } from '@testing-library/react'
 import { Reserve } from './Reserve.tsx'
-import { PlayerState } from '../../routes/context.ts'
+import { PlayerStates } from '../../data'
 
-const players: PlayerState[] = [
+const players: PlayerStates[] = [
   {
     name: 'Player2',
     status: 'isReserve',
@@ -36,7 +36,7 @@ const players: PlayerState[] = [
 
 describe('ReserveComponent', () => {
   it('should correctly order the players using default sort', () => {
-    render(<Reserve players={players} onKeeperAction={() => {}} onFieldAction={() => {}} />)
+    render(<Reserve playerStates={players} onKeeperAction={() => {}} onFieldAction={() => {}} />)
 
     const names: string[] = screen.getAllByTestId('player-card-name').map((el: HTMLDivElement) => {
       // @ts-ignore
@@ -48,7 +48,7 @@ describe('ReserveComponent', () => {
   it('should correctly order the players using timePlayed sort', () => {
     render(
       <Reserve
-        players={players}
+        playerStates={players}
         onKeeperAction={() => {}}
         onFieldAction={() => {}}
         sortMode="timePlayed"

@@ -1,22 +1,22 @@
-import { GameState, PlayerStatus } from '../routes/context.ts'
+import { GameState, Player, PlayerStatus } from '../data'
 
 export default function ChangePlayerStatus(
   gameState: GameState,
-  name: string,
+  player: Player,
   status: PlayerStatus,
 ): GameState {
   return {
     ...gameState,
-    players: gameState.players.map((player) => {
-      if (player.name === name) {
+    playerStates: gameState.playerStates.map((state) => {
+      if (state.player === player) {
         return {
-          ...player,
+          ...state,
           status,
-          subOffTime: status === 'isReserve' ? new Date().getTime() : player.subOffTime,
-          timesAsSub: status === 'isReserve' ? player.timesAsSub + 1 : player.timesAsSub,
+          subOffTime: status === 'isReserve' ? new Date().getTime() : state.subOffTime,
+          timesAsSub: status === 'isReserve' ? state.timesAsSub + 1 : state.timesAsSub,
         }
       }
-      return player
+      return state
     }),
   }
 }

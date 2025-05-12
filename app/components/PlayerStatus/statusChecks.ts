@@ -1,12 +1,12 @@
-import { GameState } from '../../routes/context.ts'
+import { GameState } from '../../data'
 
 export function isKeeperAssigned(gameState: GameState): boolean {
-  return gameState.players.some((player) => player.status === 'isKeeper')
+  return gameState.playerStates.some((state) => state.status === 'isKeeper')
 }
 
 export function isFieldFull(gameState: GameState): boolean {
   return (
-    gameState.players.filter((player) => player.status === 'isOnField').length >=
+    gameState.playerStates.filter((state) => state.status === 'isOnField').length >=
     gameState.playersOnField - 1
   )
 }

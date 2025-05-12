@@ -1,4 +1,4 @@
-import { GameState, PlayerState } from '../routes/context'
+import { GameState, PlayerState } from '../data'
 
 export type UpdateClocksProps = {
   clock: number
@@ -20,11 +20,10 @@ export function UpdateClocks({
 
   const newGameState = {
     ...gameState,
-    players: gameState.players.map((player: PlayerState) => {
+    players: gameState.playerStates.map((state: PlayerState) => {
       return {
-        ...player,
-        timePlayed:
-          player.status === 'isOnField' ? player.timePlayed + deltaTime : player.timePlayed,
+        ...state,
+        timePlayed: state.status === 'isOnField' ? state.timePlayed + deltaTime : state.timePlayed,
       }
     }),
   }

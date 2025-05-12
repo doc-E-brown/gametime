@@ -1,18 +1,18 @@
-import { PlayerState } from '../../routes/context.ts'
-import { PlayerCard } from './PlayerCard.tsx'
+import { Player, PlayerState } from '../../data'
+import { PlayerStateCard } from './PlayerStateCard'
 import { GoalKeeper, OnField as OnFieldIcon, Reserve as ReserveIcon } from '../icons'
 
 export type SortMode = 'timePlayed' | 'lastSub' | 'numberOfSubs'
 
 export type ReserveComponentProps = {
-  players: PlayerState[]
-  onKeeperAction: (name: string) => void
-  onFieldAction: (name: string) => void
+  playerStates: PlayerState[]
+  onKeeperAction: (name: Player) => void
+  onFieldAction: (name: Player) => void
   sortMode?: SortMode
 }
 
 export function Reserve({
-  players,
+  playerStates,
   onKeeperAction,
   onFieldAction,
   sortMode = 'lastSub',
@@ -36,21 +36,21 @@ export function Reserve({
         <ReserveIcon size={'16'} />
         <span className="pl-2">Reserves</span>
       </h2>
-      {players
-        .filter((player) => player.status === 'isReserve')
+      {playerStates
+        .filter((state) => state.status === 'isReserve')
         .sort(sortFn)
-        .map((player) => {
+        .map((state) => {
           return (
-            <PlayerCard
-              player={player}
-              key={player.name}
+            <PlayerStateCard
+              playerState={state}
+              key={state.player.name}
               optionAComponent={<OnFieldIcon />}
               optionAEnabled={true}
-              onOptionAClick={() => onFieldAction(player.name)}
-              optionBComponent={<ReserveIcon subCount={player.timesAsSub} />}
+              onOptionAClick={() => onFieldAction(state.player)}
+              optionBComponent={<ReserveIcon subCount={state.timesAsSub} />}
               optionBEnabled={false}
               optionCComponent={<GoalKeeper />}
-              onOptionCClick={() => onKeeperAction(player.name)}
+              onOptionCClick={() => onKeeperAction(state.player)}
               optionCEnabled={true}
             />
           )

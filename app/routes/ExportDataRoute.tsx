@@ -1,5 +1,5 @@
 import { useCookies } from 'react-cookie'
-import { GameContextCookie, GameState, getDefaultGameState } from './context.ts'
+import { GameContextCookie, GameState, getDefaultGameState } from '../data'
 import { useState } from 'react'
 
 export default function ExportDataRoute() {

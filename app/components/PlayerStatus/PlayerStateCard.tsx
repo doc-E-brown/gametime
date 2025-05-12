@@ -1,9 +1,9 @@
 import { ReactNode } from 'react'
-import { PlayerState } from '../../routes/context.ts'
+import { PlayerState } from '../../data'
 import { timeToString } from '../../lib/utils.ts'
 
-export type PlayerCardProps = {
-  player: PlayerState
+export type PlayerStateCardProps = {
+  playerState: PlayerState
   optionAComponent?: ReactNode
   onOptionAClick?: () => void
   optionAEnabled?: boolean
@@ -15,8 +15,8 @@ export type PlayerCardProps = {
   optionCEnabled?: boolean
 }
 
-export function PlayerCard({
-  player,
+export function PlayerStateCard({
+  playerState,
   optionAComponent,
   optionAEnabled,
   onOptionAClick,
@@ -26,15 +26,15 @@ export function PlayerCard({
   optionCComponent,
   optionCEnabled,
   onOptionCClick,
-}: PlayerCardProps) {
+}: PlayerStateCardProps) {
   return (
     <div className="flex flex-col items-left justify-center w-full p-2 border rounded-lg bg-gray-700">
       <div className="grid grid-cols-8">
         <div className="font-bold col-span-3 text-white text-l" data-testid="player-card-name">
-          {player.name}
+          {playerState.player.name}
         </div>
         <div className="col-span-2 text-white gap-4 text-l items-center">
-          {timeToString(player.timePlayed)}
+          {timeToString(playerState.timePlayed)}
         </div>
         <div className="col-span-1 text-white gap-4">
           {optionAComponent && (
