@@ -1,5 +1,5 @@
 import { Player, PlayerState } from '../../data'
-import { PlayerStateCard } from './PlayerStateCard.tsx'
+import { PlayerStateCard } from './PlayerStateCard'
 import { GoalKeeper, Reserve, OnField as OnFieldIcon } from '../icons'
 
 export type OnFieldComponentProps = {

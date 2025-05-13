@@ -6,12 +6,12 @@ import {
   OnField,
   Reserve,
   Unavailable,
-} from '../components/PlayerStatus'
+} from '../ui/PlayerState'
 import { useState } from 'react'
-import useTick from '../lib/useTick.tsx'
+import useTick from '../lib/useTick'
 import { useNavigate } from 'react-router'
-import ChangePlayerStatus from 'app/lib/ChangePlayerStatus.ts'
-import { timeToString } from '../lib/utils.ts'
+import ChangePlayerStatus from 'app/lib/ChangePlayerStatus'
+import { timeToString } from '../lib/utils'
 
 export default function InGameRoute() {
   const GameContextCookie = 'gameContextCookie'

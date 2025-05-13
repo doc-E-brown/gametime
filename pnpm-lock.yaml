@@ -14,6 +14,9 @@ importers:
       '@react-router/serve':
         specifier: ^7.5.3
         version: 7.6.0(react-router@7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(typescript@5.8.3)
+      clsx:
+        specifier: ^2.1.1
+        version: 2.1.1
       isbot:
         specifier: ^5.1.27
         version: 5.1.27
@@ -26,15 +29,24 @@ importers:
       react-dom:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
+      react-hook-form:
+        specifier: ^7.56.3
+        version: 7.56.3(react@19.1.0)
       react-icons:
         specifier: ^5.5.0
         version: 5.5.0(react@19.1.0)
       react-router:
         specifier: ^7.5.3
         version: 7.6.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      tailwind-merge:
+        specifier: ^3.3.0
+        version: 3.3.0
       universal-cookie:
         specifier: ^8.0.1
         version: 8.0.1
+      uuid:
+        specifier: ^11.1.0
+        version: 11.1.0
     devDependencies:
       '@eslint/js':
         specifier: ^9.26.0
@@ -1028,6 +1040,10 @@ packages:
     resolution: {integrity: sha512-Qgzu8kfBvo+cA4962jnP1KkS6Dop5NS6g7R5LFYJr4b8Ub94PPQXUksCw9PvXoeXPRRddRNC5C1JQUR2SMGtnA==}
     engines: {node: '>= 14.16.0'}
 
+  clsx@2.1.1:
+    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
+    engines: {node: '>=6'}
+
   color-convert@2.0.1:
     resolution: {integrity: sha512-RRECPsj7iu/xb5oKYcsFHSppFNnsj/52OVTRKb4zP5onXwVF3zVmmToNcOfGC+CRDpfK/U584fMg38ZHCaElKQ==}
     engines: {node: '>=7.0.0'}
@@ -2003,6 +2019,12 @@ packages:
     peerDependencies:
       react: ^19.1.0
 
+  react-hook-form@7.56.3:
+    resolution: {integrity: sha512-IK18V6GVbab4TAo1/cz3kqajxbDPGofdF0w7VHdCo0Nt8PrPlOZcuuDq9YYIV1BtjcX78x0XsldbQRQnQXWXmw==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18 || ^19
+
   react-icons@5.5.0:
     resolution: {integrity: sha512-MEFcXdkP3dLo8uumGI5xN3lDFNsRtrjbOEKDLD7yv76v4wpnEq2Lt2qeHaQOr34I/wPN3s3+N08WkQ+CW37Xiw==}
     peerDependencies:
@@ -2208,6 +2230,9 @@ packages:
     resolution: {integrity: sha512-Q/XQKRaJiLiFIBNN+mndW7S/RHxvwzuZS6ZwmRzUBqJBv/5QIKCEwkBC8GBf8EQJKYnaFs0wOZbKTXBPj8L9oQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
 
+  tailwind-merge@3.3.0:
+    resolution: {integrity: sha512-fyW/pEfcQSiigd5SNn0nApUOxx0zB/dm6UDU/rEwc2c3sX2smWUNbapHv+QRqLGVp9GWX3THIa7MUGPo+YkDzQ==}
+
   tailwindcss@4.1.5:
     resolution: {integrity: sha512-nYtSPfWGDiWgCkwQG/m+aX83XCwf62sBgg3bIlNiiOcggnS1x3uVRDAuyelBFL+vJdOPPCGElxv9DjHJjRHiVA==}
 
@@ -2333,6 +2358,10 @@ packages:
   utils-merge@1.0.1:
     resolution: {integrity: sha512-pMZTvIkT1d+TFGvDOqodOclx0QWkkgi6Tdoa8gC8ffGAAqz9pzPTZWAybbsHHoED/ztMtkv/VoYTYyShUn81hA==}
     engines: {node: '>= 0.4.0'}
+
+  uuid@11.1.0:
+    resolution: {integrity: sha512-0/A9rDy9P7cJ+8w1c9WD9V//9Wj15Ce2MPz8Ri6032usz+NfePxx5AcN3bN+r6ZL6jEo066/yNYB3tn4pQEx+A==}
+    hasBin: true
 
   valibot@0.41.0:
     resolution: {integrity: sha512-igDBb8CTYr8YTQlOKgaN9nSS0Be7z+WRuaeYqGf3Cjz3aKmSnqEmYnkfVjzIuumGqfHpa3fLIvMEAfhrpqN8ng==}
@@ -3492,6 +3521,8 @@ snapshots:
     dependencies:
       readdirp: 4.1.2
 
+  clsx@2.1.1: {}
+
   color-convert@2.0.1:
     dependencies:
       color-name: 1.1.4
@@ -4450,6 +4481,10 @@ snapshots:
       react: 19.1.0
       scheduler: 0.26.0
 
+  react-hook-form@7.56.3(react@19.1.0):
+    dependencies:
+      react: 19.1.0
+
   react-icons@5.5.0(react@19.1.0):
     dependencies:
       react: 19.1.0
@@ -4694,6 +4729,8 @@ snapshots:
       '@pkgr/core': 0.2.4
       tslib: 2.8.1
 
+  tailwind-merge@3.3.0: {}
+
   tailwindcss@4.1.5: {}
 
   tapable@2.2.1: {}
@@ -4793,6 +4830,8 @@ snapshots:
       punycode: 2.3.1
 
   utils-merge@1.0.1: {}
+
+  uuid@11.1.0: {}
 
   valibot@0.41.0(typescript@5.8.3):
     optionalDependencies:

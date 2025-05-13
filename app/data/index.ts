@@ -1,4 +1,4 @@
 export * from './player'
-export * from './gameState'
+export * from './storage'
 export * from './team'
-export * from './tmp'
+export * from './gameState'

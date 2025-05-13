@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 import { PlayerState } from '../../data'
-import { timeToString } from '../../lib/utils.ts'
+import { timeToString } from '../../lib/utils'
 
 export type PlayerStateCardProps = {
   playerState: PlayerState

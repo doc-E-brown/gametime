@@ -1,32 +1,32 @@
 import { describe, expect, it } from 'vitest'
 import { render, screen } from '@testing-library/react'
-import { Reserve } from './Reserve.tsx'
-import { PlayerStates } from '../../data'
+import { Reserve } from './Reserve'
+import { PlayerState } from '../../data'
 
-const players: PlayerStates[] = [
+const players: PlayerState[] = [
   {
-    name: 'Player2',
+    player: { name: 'Player2', id: 'p2' },
     status: 'isReserve',
     subOffTime: 0,
     timePlayed: 5,
     timesAsSub: 0,
   },
   {
-    name: 'Player1',
+    player: { name: 'Player1', id: 'p1' },
     status: 'isReserve',
     subOffTime: 1,
     timePlayed: 3,
     timesAsSub: 0,
   },
   {
-    name: 'Player4',
+    player: { name: 'Player4', id: 'p4' },
     status: 'isReserve',
     subOffTime: 2,
     timePlayed: 2,
     timesAsSub: 0,
   },
   {
-    name: 'Player3',
+    player: { name: 'Player3', id: 'p3' },
     status: 'isReserve',
     subOffTime: 3,
     timePlayed: 4,

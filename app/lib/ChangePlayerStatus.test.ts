@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import ChangePlayerStatus from '../lib/ChangePlayerStatus.ts'
+import ChangePlayerStatus from '../lib/ChangePlayerStatus'
 import { GameState } from '../data'
 
 describe('ChangePlayerStatus', () => {
