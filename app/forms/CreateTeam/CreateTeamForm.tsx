@@ -2,7 +2,6 @@ import { useCreateTeamForm } from './useCreateTeamForm'
 import { FormProvider, SubmitHandler } from 'react-hook-form'
 import { NewTeamName } from './NewTeamName'
 import { NewTeamRoster } from './NewTeamRoster'
-import { Form } from 'react-router'
 import { addNewTeam, createTeam, OpenConfiguration } from '../../data'
 import { NewTeam } from './useCreateTeamForm'
 import NewTeamConfiguration from './NewTeamConfiguration'
@@ -36,7 +35,7 @@ export function CreateTeamForm() {
   return (
     <FormProvider {...formProps}>
       <h1>Create New Team</h1>
-      <Form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <NewTeamConfiguration />
         <NewTeamName />
         <NewTeamRoster teamSize={teamSize} />
@@ -45,7 +44,7 @@ export function CreateTeamForm() {
             Create Team
           </button>
         </p>
-      </Form>
+      </form>
     </FormProvider>
   )
 }

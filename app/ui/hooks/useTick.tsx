@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export default function useTick(tickPeriod: number, callback: (timeDelta: number) => void) {
+export function useTick(tickPeriod: number, callback: (timeDelta: number) => void) {
   const [prevTime, setPrevTime] = useState(new Date().getTime())
 
   useEffect(() => {

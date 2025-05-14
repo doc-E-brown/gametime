@@ -21,6 +21,7 @@ export default [
       '**/dist/**',
       '**/coverage/**/*',
       'postcss.config.js',
+      '**/node_modules/**/*',
     ],
   },
 

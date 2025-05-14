@@ -1,4 +1,4 @@
-import { GameState, Player, getDefaultGameState, PlayerStatus, PlayerState } from '../data'
+import { Match, Player, getDefaultGameState, PlayerStatus, PlayerState } from '../data'
 import {
   isFieldFull,
   isKeeperAssigned,
@@ -8,14 +8,14 @@ import {
   Unavailable,
 } from '../ui/PlayerState'
 import { useState } from 'react'
-import useTick from '../lib/useTick'
+import useTick from '../ui/hooks/useTick'
 import { useNavigate } from 'react-router'
 import ChangePlayerStatus from 'app/lib/ChangePlayerStatus'
 import { timeToString } from '../lib/utils'
 
 export default function InGameRoute() {
   const GameContextCookie = 'gameContextCookie'
-  const [gameState, setGameState] = useState<GameState>(getDefaultGameState())
+  const [gameState, setGameState] = useState<Match>(getDefaultGameState())
   const [isPlaying, setIsPlaying] = useState(false)
   const [gameClock, setGameClock] = useState(0)
   const [clearDataCount, setClearDataCount] = useState(0)

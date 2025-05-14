@@ -1,10 +1,10 @@
 import { describe, expect, it } from 'vitest'
 import ChangePlayerStatus from '../lib/ChangePlayerStatus'
-import { GameState } from '../data'
+import { Match } from '../data'
 
 describe('ChangePlayerStatus', () => {
   it('should update player status correctly', () => {
-    const initialGameState: GameState = {
+    const initialGameState: Match = {
       playerStates: [
         {
           player: { name: 'Player1', id: 'player1' },

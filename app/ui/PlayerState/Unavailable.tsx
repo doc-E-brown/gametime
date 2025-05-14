@@ -1,6 +1,6 @@
 import { Player, PlayerState } from '../../data'
 import { PlayerStateCard } from './PlayerStateCard'
-import { GoalKeeper, OnField as OnFieldIcon, Reserve } from '../icons'
+import { GoalKeeper, OnField as OnFieldIcon, Reserve } from '../Icons'
 
 export type UnavailableComponentProps = {
   playerStates: PlayerState[]

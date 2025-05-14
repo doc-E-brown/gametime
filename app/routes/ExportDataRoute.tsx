@@ -1,13 +1,13 @@
 import { useCookies } from 'react-cookie'
-import { GameContextCookie, GameState, getDefaultGameState } from '../data'
+import { GameContextCookie, Match, getDefaultGameState } from '../data'
 import { useState } from 'react'
 
 export default function ExportDataRoute() {
   const [gameContextCookie, setGameContextCookie, removeGameContextCookie] = useCookies<
     typeof GameContextCookie,
-    GameState
+    Match
   >([GameContextCookie])
-  const [gameState, setGameState] = useState<GameState>(
+  const [gameState, setGameState] = useState<Match>(
     gameContextCookie[GameContextCookie] ?? getDefaultGameState(),
   )
 

@@ -1,4 +1,4 @@
-import { GameState } from './gameState'
+import { Match } from './gameState'
 import { Player, PlayerState } from './player'
 
 function createPlayer(name: string): PlayerState {
@@ -15,7 +15,7 @@ function createPlayer(name: string): PlayerState {
   }
 }
 
-export function getDefaultGameState(): GameState {
+export function getDefaultGameState(): Match {
   return {
     playerStates: [
       createPlayer('Ben'),

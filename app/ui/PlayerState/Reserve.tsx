@@ -1,6 +1,6 @@
 import { Player, PlayerState } from '../../data'
 import { PlayerStateCard } from './PlayerStateCard'
-import { GoalKeeper, OnField as OnFieldIcon, Reserve as ReserveIcon } from '../icons'
+import { GoalKeeper, OnField as OnFieldIcon, Reserve as ReserveIcon } from '../Icons'
 
 export type SortMode = 'timePlayed' | 'lastSub' | 'numberOfSubs'
 

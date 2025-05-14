@@ -4,53 +4,66 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="599d0c68-2914-4d20-81c7-1dfd4104977b" name="Changes" comment="feat: Refactor data">
-      <change afterPath="$PROJECT_DIR$/app/forms/CreateTeam/CreateTeamForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/forms/CreateTeam/NewTeamConfiguration.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/forms/CreateTeam/NewTeamName.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/forms/CreateTeam/NewTeamRoster.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/forms/CreateTeam/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/forms/CreateTeam/useCreateTeamForm.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/forms/CreateTeam/useTeamConfiguration.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/CreateNewTeamRoute.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/ManageTeamRoute.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/routes/TeamRoute.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ui/Teams/CreateTeamName.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ui/input/TextInput.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/ui/input/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" />
+    <list default="true" id="599d0c68-2914-4d20-81c7-1dfd4104977b" name="Changes" comment="feat: Starting roster management">
+      <change afterPath="$PROJECT_DIR$/app/data/match.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/forms/Match/MatchForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/forms/Match/NewMatchForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/forms/Match/SelectTeam.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/forms/Match/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/forms/Match/useNewMatchForm.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/forms/Match/utils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/WelcomeRoute.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/match/CreateNewMatchRoute.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/match/MatchRoute.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Input/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Match/GameClock.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Match/Match.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Match/PlayerManagement.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/Match/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/ui/hooks/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PlayerStatus/Keeper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/PlayerState/Keeper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PlayerStatus/OnField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/PlayerState/OnField.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PlayerStatus/PlayerStateCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/PlayerState/PlayerStateCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PlayerStatus/Reserve.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/PlayerState/Reserve.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PlayerStatus/Reserve.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/PlayerState/Reserve.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PlayerStatus/Unavailable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/PlayerState/Unavailable.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PlayerStatus/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/PlayerState/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/PlayerStatus/statusChecks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/PlayerState/statusChecks.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/icons/GoalKeeper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/icons/GoalKeeper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/icons/OnField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/icons/OnField.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/icons/Reserve.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/icons/Reserve.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/icons/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/icons/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/data/gameState.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/gameState.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/data/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/data/player.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/player.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/data/storage.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/storage.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/data/team.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/team.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/data/tmp.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/data/tmp.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/forms/CreateTeam/CreateTeamForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms/CreateTeam/CreateTeamForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/forms/CreateTeam/NewTeamName.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms/CreateTeam/NewTeamName.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/forms/CreateTeam/NewTeamRoster.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms/CreateTeam/NewTeamRoster.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/lib/ChangePlayerStatus.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ChangePlayerStatus.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/ChangePlayerStatus.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/ChangePlayerStatus.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/UpdateClocks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/lib/UpdateClocks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/lib/useTick.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/hooks/useTick.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/root.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/root.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/CreateNewTeamRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/team/CreateNewTeamRoute.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/ExportDataRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/ExportDataRoute.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/HomeRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/HomeRoute.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/InGameRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/InGameRoute.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/routes/StartRoute.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/ManageTeamRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/team/ManageTeamRoute.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/PlayerState/Keeper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/PlayerState/Keeper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/PlayerState/OnField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/PlayerState/OnField.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/PlayerState/Reserve.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/PlayerState/Reserve.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/PlayerState/Unavailable.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/PlayerState/Unavailable.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/PlayerState/statusChecks.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/PlayerState/statusChecks.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/icons/GoalKeeper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/Icons/GoalKeeper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/icons/OnField.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/Icons/OnField.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/icons/Reserve.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/Icons/Reserve.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/icons/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/Icons/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/input/TextInput.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/ui/Input/TextInput.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/ui/input/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/forms/Match/useInMatchForm.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eslint.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="repository" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -127,11 +140,11 @@
       <recent name="$PROJECT_DIR$/app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/ui/hooks" />
+      <recent name="$PROJECT_DIR$/app/routes/team" />
       <recent name="$PROJECT_DIR$/app/forms/CreateTeam" />
       <recent name="$PROJECT_DIR$/app/data" />
       <recent name="$PROJECT_DIR$/app/components/icons" />
-      <recent name="$PROJECT_DIR$/app/components/PlayerStatus" />
-      <recent name="$PROJECT_DIR$/app/pages" />
     </key>
   </component>
   <component name="RunManager" selected="Vitest.ReserveComponent.should correctly order the players using timePlayed sort">
@@ -226,7 +239,10 @@
       <workItem from="1747111243709" duration="586000" />
       <workItem from="1747112976780" duration="147000" />
       <workItem from="1747113164475" duration="6737000" />
-      <workItem from="1747120684853" duration="15318000" />
+      <workItem from="1747120684853" duration="18108000" />
+      <workItem from="1747183401665" duration="7444000" />
+      <workItem from="1747197171022" duration="2766000" />
+      <workItem from="1747199983627" duration="3791000" />
     </task>
     <task id="LOCAL-00001" summary="feat: Add netlify config">
       <option name="closed" value="true" />
@@ -316,7 +332,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747052774468</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat: Starting roster management">
+      <option name="closed" value="true" />
+      <created>1747148925474</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1747148925474</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +366,8 @@
     <MESSAGE value="chore: Tidy up structure" />
     <MESSAGE value="feat: Big usability update" />
     <MESSAGE value="feat: Refactor data" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: Refactor data" />
+    <MESSAGE value="feat: Starting roster management" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: Starting roster management" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

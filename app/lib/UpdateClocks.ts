@@ -1,13 +1,13 @@
-import { GameState, PlayerState } from '../data'
+import { Match, PlayerState } from '../data'
 
 export type UpdateClocksProps = {
   clock: number
-  gameState: GameState
+  gameState: Match
   deltaTime: number
 }
 
 export type UpdateClockReturn = {
-  gameState: GameState
+  gameState: Match
   clock: number
 }
 

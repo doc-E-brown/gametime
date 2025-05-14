@@ -2,7 +2,7 @@ import { isTeamNameAvailable } from 'app/data'
 import { useFormContext } from 'react-hook-form'
 import { NewTeam } from './useCreateTeamForm'
 import { useEffect } from 'react'
-import { TextInput } from 'app/ui/input/TextInput'
+import { TextInput } from 'app/ui/Input/TextInput'
 
 export function NewTeamName() {
   const {

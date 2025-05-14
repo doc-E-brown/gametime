@@ -1,5 +1,5 @@
 import { Team } from 'app/data'
-import { getListOfTeams } from '../data'
+import { getListOfTeams } from '../../data'
 
 export default function ManageTeamRoute({ params }: { params: { teamId: string } }) {
   const teams = getListOfTeams()

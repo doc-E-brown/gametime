@@ -1,7 +1,7 @@
 import { useFormContext } from 'react-hook-form'
 import { NewTeam } from './useCreateTeamForm'
 import { useEffect, useState } from 'react'
-import { TextInput } from '../../ui/input/TextInput'
+import { TextInput } from '../../ui/Input/TextInput'
 
 export function NewTeamRoster({ teamSize }: { teamSize: number }) {
   const {
