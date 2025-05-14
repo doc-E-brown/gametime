@@ -4,6 +4,7 @@ import { FormProvider, SubmitHandler } from 'react-hook-form'
 import { InMatchForm, useInMatchForm } from './useInMatchForm'
 import { loadMatchSummary, saveMatchDetails } from 'app/data'
 import { GameClock, GameScore, PlayerManagement } from 'app/ui/Match'
+import { useTick } from 'app/ui/hooks'
 
 export function MatchForm({ matchId }: { matchId: string }) {
   const formProps = useInMatchForm({ matchId })
@@ -26,9 +27,7 @@ export function MatchForm({ matchId }: { matchId: string }) {
     }
   }
 
-  useEffect(() => {
-    save()
-  }, [deltaTime])
+  useTick(1000, save)
 
   const finishGame: SubmitHandler<InMatchForm> = (data) => {
     setValue('isGamePlaying', 'finished')
