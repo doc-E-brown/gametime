@@ -37,21 +37,21 @@ export function PlayerStateCard({
           {timeToString(playerState.timePlayed)}
         </div>
         <div className="col-span-1 text-white gap-4">
-          {optionAComponent && (
+          {optionAEnabled && (
             <button onClick={onOptionAClick} disabled={!optionAEnabled}>
               {optionAComponent}
             </button>
           )}
         </div>
         <div className="col-span-1 text-white gap-4">
-          {optionBComponent && (
+          {optionBEnabled && (
             <button onClick={onOptionBClick} disabled={!optionBEnabled}>
               {optionBComponent}
             </button>
           )}
         </div>
         <div className="col-span-1 text-white gap-4">
-          {optionCComponent && (
+          {optionCEnabled && (
             <button onClick={onOptionCClick} disabled={!optionCEnabled}>
               {optionCComponent}
             </button>

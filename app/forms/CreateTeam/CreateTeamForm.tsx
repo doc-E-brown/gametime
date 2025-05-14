@@ -17,17 +17,23 @@ export function CreateTeamForm() {
     watch,
   } = formProps
 
-  const config = watch('configuration', OpenConfiguration)
+  const config = watch('configuration')
 
   useEffect(() => {
-    const numPlayers = config?.playersOnField ?? 0
-    const numReserves = config?.maximumReserves ?? 0
-    setTeamSize((prev) => numPlayers + numReserves)
+    if (config) {
+      const numPlayers = config?.playersOnField ?? 0
+      const numReserves = config?.maximumReserves ?? 0
+      setTeamSize((prev) => numPlayers + numReserves)
+    }
   }, [config])
 
   const onSubmit: SubmitHandler<NewTeam> = (data) => {
     if (!errors.name && !errors.players && !errors.configuration) {
-      const newTeam = createTeam(data.name, data.players, data.configuration)
+      const newTeam = createTeam(
+        data.name,
+        data.players.filter((val) => val !== ''),
+        data.configuration,
+      )
       addNewTeam(newTeam)
     }
   }

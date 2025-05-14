@@ -7,6 +7,7 @@ export type UnavailableComponentProps = {
   onFieldAction: (name: Player) => void
   onReserveAction: (name: Player) => void
   onKeeperAction: (name: Player) => void
+  playWithKeeper: boolean
 }
 
 export function Unavailable({
@@ -14,6 +15,7 @@ export function Unavailable({
   onFieldAction,
   onReserveAction,
   onKeeperAction,
+  playWithKeeper,
 }: UnavailableComponentProps) {
   const allAvailable = () => {
     playerStates.forEach((state) => {
@@ -41,7 +43,7 @@ export function Unavailable({
               onOptionBClick={() => onReserveAction(state.player)}
               optionCComponent={<GoalKeeper />}
               onOptionCClick={() => onKeeperAction(state.player)}
-              optionCEnabled={true}
+              optionCEnabled={playWithKeeper}
             />
           )
         })}

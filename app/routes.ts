@@ -8,6 +8,7 @@ export default [
     route('/manage', './routes/team/ManageTeamRoute.tsx'),
   ]),
   ...prefix('match', [
+    index('./routes/match/ListMatchRoute.tsx'),
     route('/new', './routes/match/CreateNewMatchRoute.tsx'),
     route('/:matchId', './routes/match/MatchRoute.tsx'),
     // route('/manage', './routes/ManageMatchRoute.tsx'),

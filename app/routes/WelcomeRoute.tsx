@@ -11,6 +11,10 @@ export default function WelcomeRoute() {
     navigate('/match/new')
   }
 
+  function loadMatch() {
+    navigate
+  }
+
   return (
     <div>
       <h1>Welcome to GameTime</h1>
@@ -19,6 +23,9 @@ export default function WelcomeRoute() {
       </p>
       <p>
         <button onClick={handleNewMatch}>New Match</button>
+      </p>
+      <p>
+        <a href="/match/">List of Matches</a>
       </p>
     </div>
   )

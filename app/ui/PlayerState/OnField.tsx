@@ -6,17 +6,27 @@ export type OnFieldComponentProps = {
   playerStates: PlayerState[]
   onKeeperAction: (name: Player) => void
   onReserveAction: (name: Player) => void
+  playWithKeeper: boolean
+  maxOnField: number
 }
 
-export function OnField({ playerStates, onKeeperAction, onReserveAction }: OnFieldComponentProps) {
+export function OnField({
+  playerStates,
+  onKeeperAction,
+  onReserveAction,
+  playWithKeeper,
+  maxOnField,
+}: OnFieldComponentProps) {
+  const onField = playerStates.filter((state) => state.status === 'isOnField')
   return (
     <div className="w-full border-white rounded-md">
       <h2 className="font-bold pt-2">
         <OnFieldIcon size={'16'} />
-        <span className="pl-2">On Field</span>
+        <span className="pl-2">
+          On Field ( {onField.length}/{maxOnField} )
+        </span>
       </h2>
-      {playerStates
-        .filter((state) => state.status === 'isOnField')
+      {onField
         .sort((a, b) => b.timePlayed - a.timePlayed)
         .map((state) => {
           return (
@@ -24,12 +34,12 @@ export function OnField({ playerStates, onKeeperAction, onReserveAction }: OnFie
               playerState={state}
               key={state.player.name}
               optionAComponent={<OnFieldIcon />}
-              optionAEnabled={false}
+              optionAEnabled={true}
               optionBComponent={<Reserve subCount={state.timesAsSub} />}
               optionBEnabled={true}
               onOptionBClick={() => onReserveAction(state.player)}
               optionCComponent={<GoalKeeper />}
-              optionCEnabled={true}
+              optionCEnabled={playWithKeeper}
               onOptionCClick={() => onKeeperAction(state.player)}
             />
           )

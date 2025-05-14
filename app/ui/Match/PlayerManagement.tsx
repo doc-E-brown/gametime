@@ -2,7 +2,7 @@ import { InMatchForm } from 'app/forms/Match'
 import { useFormContext } from 'react-hook-form'
 import { useEffect } from 'react'
 import { isFieldFull, isKeeperAssigned } from 'app/forms/Match'
-import { ChangePlayerStatus, Player, PlayerState } from 'app/data'
+import { ChangePlayerStatus, Player, PlayerState, PlayerStatus } from 'app/data'
 import { Keeper, OnField, Reserve, Unavailable } from '../PlayerState'
 
 export function PlayerManagement() {
@@ -14,7 +14,7 @@ export function PlayerManagement() {
 
   ///////////////////////////////////////////////////////////////////////////////////////////
   // Manage player status
-  const changeStatus = (player, status) => {
+  const changeStatus = (player: Player, status: PlayerStatus) => {
     setValue('playerStates', ChangePlayerStatus(player, status, playerStates))
   }
 
@@ -25,6 +25,9 @@ export function PlayerManagement() {
   }
 
   const onKeeperAction = (player: Player) => {
+    if (!teamConfig.playWithKeeper) {
+      return
+    }
     if (!isKeeperAssigned(playerStates, teamConfig)) {
       changeStatus(player, 'isKeeper')
     }
@@ -33,6 +36,8 @@ export function PlayerManagement() {
   const onReserveAction = (player: Player) => {
     changeStatus(player, 'isReserve')
   }
+
+  const anyUnavailable = playerStates.some((state) => state.status === 'isUnavailable')
   ///////////////////////////////////////////////////////////////////////////////////////////
   // Update Playtime
 
@@ -55,27 +60,36 @@ export function PlayerManagement() {
     <>
       <h2 className="font-bold p-2">Roster</h2>
       <div className="p-4 bg-gray-800 rounded-2xl">
-        <Keeper
-          playerStates={playerStates}
-          onReserveAction={onReserveAction}
-          onFieldAction={onFieldAction}
-        />
+        {Boolean(teamConfig) && teamConfig.playWithKeeper ? (
+          <Keeper
+            playerStates={playerStates}
+            onReserveAction={onReserveAction}
+            onFieldAction={onFieldAction}
+          />
+        ) : null}
         <OnField
           playerStates={playerStates}
           onReserveAction={onReserveAction}
           onKeeperAction={onKeeperAction}
+          playWithKeeper={teamConfig.playWithKeeper}
+          maxOnField={teamConfig.playersOnField}
         />
         <Reserve
           playerStates={playerStates}
           onKeeperAction={onKeeperAction}
           onFieldAction={onFieldAction}
+          playWithKeeper={teamConfig.playWithKeeper}
+          maxReserves={teamConfig.maximumReserves}
         />
-        <Unavailable
-          playerStates={playerStates}
-          onReserveAction={onReserveAction}
-          onFieldAction={onFieldAction}
-          onKeeperAction={onKeeperAction}
-        />
+        {anyUnavailable && (
+          <Unavailable
+            playerStates={playerStates}
+            onReserveAction={onReserveAction}
+            onFieldAction={onFieldAction}
+            onKeeperAction={onKeeperAction}
+            playWithKeeper={teamConfig.playWithKeeper}
+          />
+        )}
       </div>
     </>
   )

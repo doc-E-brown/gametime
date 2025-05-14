@@ -27,6 +27,8 @@ export type Match = {
   playersOnField: number
   isGamePlaying: MatchStatus
   gameClock: number
+  teamScore: number
+  opponentScore: number
 }
 
 export function createMatch(matchSummary: MatchSummary, team: Team): Match {
@@ -43,5 +45,7 @@ export function createMatch(matchSummary: MatchSummary, team: Team): Match {
     playersOnField: 0,
     isGamePlaying: 'notStated',
     gameClock: 0,
+    teamScore: 0,
+    opponentScore: 0,
   }
 }

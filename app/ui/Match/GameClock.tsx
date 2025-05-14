@@ -14,6 +14,7 @@ export function GameClock({ initialClock, tickPeriod }: GameClockProps) {
   const [gameClock, setGameClock] = useState(initialClock ?? 0)
 
   const isGamePlaying = watch('isGamePlaying')
+  const gameTime = watch('team.configuration.timePerPeriod')
 
   const start = () => setValue('isGamePlaying', 'inProgress')
   const stop = () => setValue('isGamePlaying', 'isPaused')
@@ -29,7 +30,7 @@ export function GameClock({ initialClock, tickPeriod }: GameClockProps) {
 
   return (
     <>
-      <h2 className="font-bold p-2">Game Clock</h2>
+      <h2 className="font-bold p-2">Game Clock ({gameTime * 2}min)</h2>
       <div className="p-4 bg-gray-800 rounded-2xl grid grid-cols-3 items-center justify-items-center">
         <div className="col-span-1">
           <button onClick={start}>Start</button>
